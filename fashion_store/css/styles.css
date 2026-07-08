@@ -1,8 +1,17 @@
-/*Stylesheet*/
 @import url("variables.css");
 
-/*general reset*/
 
+/*font encodesans*/
+@font-face {
+  font-family: 'EncodeSans';
+  src: url('../storage/font/static/EncodeSans-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; 
+}
+
+
+/*general reset*/
 * {
     margin: 0;
     padding: 0;
@@ -10,20 +19,29 @@
 }
 
 h3{
-    font-family: var(--font-family, apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif);
-    font-size: var(--font-size, 20px);
+    font-family: "EncodeSans", EncodeSans-Regular;
+    font-size: var(--font-size, 18px);
     color: var(--white, #fff);
     margin-bottom: 8px;
 }
 
+
+/*Config del body*/
+body{
+    background-color: var(--light-grey);
+    width: 100%;
+    height: 100%;
+    font-family: "EncodeSans", EncodeSans-Regular;
+}
+
 /*header*/
 .header{
-    font-family: var(--font-family, apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif);
+   font-family: "EncodeSans", EncodeSans-Regular;
     display: flex;
     position: relative;
     width: 100%;
-    height: 50px;
-    justify-content: center;
+    height: 60px;
+    justify-content: space-between;
     gap: 40px;
     align-items: center;
     padding: 15px;
@@ -51,11 +69,11 @@ h3{
 }
 
 .mobile-menu input[type="checkbox"]:checked ~ .menu {
-    display: block;
+    display: none;
 }
 
 .burguer{
-    font-size: 25px;
+    font-size: 20px;
     cursor:pointer;
 }
 
@@ -76,10 +94,10 @@ h3{
 }
 
 .mobile-menu a {
-    color: var(--light-grey, #f2f2f2);
+    color: var(--white, #fff);
     background-color: var(--primary-color, #333);
-    font-size: 16px;
-    padding: 5px 12px;
+    font-size: 14px;
+    padding: 4px 9px;
     border-radius: 20px;
     text-decoration: none;
     
@@ -87,16 +105,9 @@ h3{
 
 .mobile-menu a:hover{
     color: var(--primary-color, #333);
-    background-color: var(--white, #fff);
+    background-color: var(--primary-medium, #f0f0f0);
 }
 
-/*color del body*/
-body{
-    background-color: var(--white);
-    width: 100%;
-    height: 100%;
-    font-family: var(--font-family, apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif);
-}
 
 /* Estilos para la barra de búsqueda */
 .search-bar{
@@ -104,14 +115,14 @@ body{
     gap: 8px;
     max-width: 500px;
     margin: 16px auto;
-    padding: 8px;
+    padding: 5px;
     align-items: center;
     border-radius: 20px;
 }
 
 .search-bar input[type="search"]{
     flex: 1;
-    padding: 10px 12px;
+    padding: 8px 10px;
     border: 1px solid var(--dark-grey, #999);
     border-radius: 20px;
     font-size: 1rem;
@@ -119,7 +130,7 @@ body{
 }
 
 .search-bar button{
-    padding: 10px 14px;
+    padding: 8px 10px;
     background: var(--primary-color, #333);
     color: #fff;
     border: none;
@@ -128,53 +139,66 @@ body{
     z-index: 100;
 }
 
-.search-bar button:active{opacity:0.9}
+.search-bar button:active{opacity:0.5}
 
 /*seccion de categorias*/
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(180px, 1fr));
+    gap: 16px;
+    padding: 20px 0;
+}
+
 .categories-title{
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     margin-bottom: 16px;
 }
 
-/*grid de product cards*/
-.product-cards{
+.category-figure {
+    position: relative;
     display: grid;
-    position: absolute;
-    align-items: center;
-    justify-content:flex-start;
-    grid-template-columns: repeat(10, 4fr);
-    gap: 20px; 
+    justify-items: center;
 }
 
-.product-rating{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    text-align: center;
-    border-radius: 20px;
-}
+/*grid de product cards*/
+
+
+
 
 /*customizacion de imagenes de productos*/
+
+.product-title{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
 .product-image{
-    width: 200px;
+    width: 100%;
     height: 400px;
+    padding: 15px, 0;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 .product-image:hover{
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-image:hover:active{
+    transform: scale(1.4);
+    z-index: 100%;
 }
 
 .product-info{
     display: flex;
-    font-size: var(--font-size, 20px);
+    font-size: var(--font-size, 15px);
     width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -188,11 +212,14 @@ body{
     margin-top: 15px;    
 }
 
-.product-title{
+.product-rating{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
     text-align: center;
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 15px;
+    border-radius: 20px;
 }
 
 .favorites-toggle {
@@ -200,12 +227,11 @@ body{
 }
 
 .favoritos {
-    cursor: pointer;
-    width: 50px;
-    font-size: 24px;
-    color: var(--white, #fff);
-    background-color: var(--primary-color, #333);
-    border-radius: 50%;
+    position: absolute;
+    top: 60px;
+    right: 50px;
+    font-size: 15px;
+    cursor:pointer;
 }
 
 .favorites-toggle:checked + .favoritos {
@@ -216,34 +242,49 @@ body{
     color: red;
 }
 
+
+.product-cards {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(180px, 1fr));
+    gap: 16px;
+    padding: 20px 0;
+}
+
 /* Responsive rules for store */
-@media (max-width: 768px) {
-    .product-cards {
-        grid-template-columns: repeat(3, 1fr);
+
+@media (max-width: 850px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(180px, 1fr));
         background-color: var(--white, );
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(180px, 1fr));
+        background-color: var(--white, );
+        padding: 20px 0;
+
     }
 }
 
 @media (max-width: 608px) {
-    .product-cards {
-        grid-template-columns: repeat(1, 1fr);
-        background-color: var(--primary-medium, #f0f0f0);
+    .container {
+         display: grid;
+        grid-template-columns: repeat(2, minmax(180px, 1fr));
+        background-color: var(--white, );
+        padding: 20px 0;
+
     }
 }
 
 /* Responsive rules for menu display */
 
-/*tablet*/
-@media (max-width: 768px) {
-    .menu {
-        display:grid;
-        position:initial;
-        gap: 20px;
-    }
-}
-
 /*mobile*/
-@media (max-width: 608px) {
+@media (max-width: 508px) {
     .menu {
         display:grid;
         position:initial;

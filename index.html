@@ -7,14 +7,13 @@
     <meta name="description" content="Pagina de inicio de tienda mobil online">
     
     <title>Inicio</title>
-    <!--se cambio la ruta de la hoja de estilos-->
     <link rel="stylesheet" href="./fashion_store/css/styles.css">
 </head>
 
 <header class="header">
     <!--saludo de bienvenida personalizado-->
     <h3 class="welcome-message">Bienvenido a Fashion Store Usuario</h3>
-    <img src="./fashion_store/storage/img/userIcon.webp" alt="user-pic" class="user-picture">
+    <img src="./storage/img/userIcon.webp" alt="user-pic" class="user-picture">
 </header>
     <!--Menu movil con "Inicio", "carrito de compras", "favoritos", "perfil"-->
      
@@ -24,14 +23,10 @@
             <label for="menu-toggle" class="burguer">☰</label>
         </div>
             <ul class="menu">
-                <li><label for="inicio">🏠</label>
-                    <a href="#inicio">Inicio</a></li>
-                <li><label for="carrito">🛒</label>
-                    <a href="#carrito">Carrito de compras</a></li>
-                <li><label for="favoritos">🤍</label>
-                    <a href="#favoritos">Favoritos</a></li>
-                <li><label for="perfil">👤</label>
-                    <a href="#perfil">Perfil</a></li>
+                <li><a href="./index.html">🏠Inicio</a></li>
+                <li><a href="./views/checkout.html">🛒Compras</a></li>
+                <li><a href="./views/details.html">🤍Favoritos</a></li>
+                <li><a href="#perfil">👤Perfil</a></li>
             </ul>
     </nav>
 
@@ -42,64 +37,93 @@
         <button id="searchButton" type="submit">Buscar</button>
     </form>
         <!--categorias disponibles-->
-        <h2 class="categories-title">Categorias Disponibles</h2><br>
-        <section class="product-cards">
-            <!--tarjetas de productos-->
-            <div class="product-card">
-                <h2 class="product-title">Producto 1</h2>
-                    <img src="./fashion_store/storage/img/product1.jpg" alt="Imagen del producto 1" class="product-image"></button><br>
-                        <input type="checkbox" id="add-to-favorites" class="favorites-toggle">
-                            <label for="add-to-favorites" class="favoritos">🤍</label>
-                    <div class="product-info">
-                        <span class="product-category">Bolso</span>
-                        <span class="product-price">$19.99</span>
-                    </div>                        
-                    <span class="product-rating">⭐⭐⭐⭐☆</span>
-            </div>
-            <div class="product-card">
-                <h2 class="product-title">Producto 2</h2>
-                <img src="./fashion_store/storage/img/product2.jpg" alt="Imagen del producto 2" class="product-image"></button><br>
-                     <input type="checkbox" id="add-to-favorites" class="favorites-toggle">
-                        <label for="add-to-favorites" class="favoritos">🤍</label>
-                    <div class="product-info">
-                        <span class="product-category">Vestido</span>
-                        <span class="product-price">$29.99</span>
+        <h1 class="categories-title">Categorias Disponibles</h1>
+        <section class="container" aria-label="Categorias-disponibles">
+            <!--Articulo1-->
+            <article class="contenedor-de-categoria">
+                <figure class="category-figure">            
+                    <!--tarjetas de productos-->
+                    <div class="product-card">
+                        <h2 class="product-title">Categoria 1</h2>
+                            <img src="./storage/img/product1.jpg" alt="Imagen del producto 1" class="product-image"></button><br>
+                                <input type="checkbox" id="add-to-favorites" class="favorites-toggle">
+                                    <label for="add-to-favorites" class="favoritos">🤍</label>
+                            <div class="product-info">
+                                <span class="product-category">Bolso</span>
+                                <span class="product-price">$19.99</span>
+                            </div>                        
+                            <span class="product-rating">⭐⭐⭐⭐☆</span>
                     </div>
-                    <span class="product-rating">⭐⭐⭐☆☆</span>
-            </div>
-            <div class="product-card">
-                <h2 class="product-title">Producto 3</h2>
-                <img src="./fashion_store/storage/img/product3.jpg" alt="Imagen del producto 3" class="product-image"></button><br>
-                     <input type="checkbox" id="add-to-favorites" class="favorites-toggle">
-                        <label for="add-to-favorites" class="favoritos">🤍</label>
-                    <div class="product-info">
-                        <span class="product-category">Vestido</span>
-                        <span class="product-price">$39.99</span>
+                </figure>
+            </article>
+            <!--Articulo2-->
+            <article class="contenedor-de-categoria">
+                <figure class="category-figure">            
+                    <!--tarjetas de productos-->
+                    <div class="product-card">
+                        <h2 class="product-title">Categoria 2</h2>
+                            <img src="./storage/img/product2.jpg" alt="Imagen del producto 2" class="product-image"></button><br>
+                                <input type="checkbox" id="add-to-favorites" class="favorites-toggle">
+                                    <label for="add-to-favorites" class="favoritos">🤍</label>
+                            <div class="product-info">
+                                <span class="product-category">Vestido</span>
+                                <span class="product-price">$29.99</span>
+                            </div>
+                            <span class="product-rating">⭐⭐⭐☆☆</span>                     
                     </div>
-                    <span class="product-rating">⭐⭐⭐⭐⭐</span>
-            </div>
-            <div class="product-card">
-                <h2 class="product-title">Producto 4</h2>
-                <img src="./fashion_store/storage/img/product4.jpg" alt="Imagen del producto 4" class="product-image"></button><br>
-                     <input type="checkbox" id="add-to-favorites" class="favorites-toggle">
-                        <label for="add-to-favorites" class="favoritos">🤍</label>
-                    <div class="product-info">
-                        <span class="product-category">Bolso</span>
-                        <span class="product-price">$49.99</span>
+                </figure>
+            </article>
+            <!--Articulo3-->
+            <article class="contenedor-de-categoria">
+                <figure class="category-figure">            
+                    <!--tarjetas de productos-->
+                    <div class="product-card">
+                <h2 class="product-title">Categoria 3</h2>
+                <img src="./storage/img/product3.jpg" alt="Imagen del producto 3" class="product-image"></button>
+                                <input type="checkbox" id="add-to-favorites" class="favorites-toggle">
+                                    <label for="add-to-favorites" class="favoritos">🤍</label>
+                            <div class="product-info">
+                                <span class="product-category">Vestido</span>
+                                <span class="product-price">$19.99</span>
+                            </div>                        
+                            <span class="product-rating">⭐⭐⭐⭐☆</span>
                     </div>
-                    <span class="product-rating">⭐⭐☆☆☆</span>
-            </div>
-            <div class="product-card">
-                <h2 class="product-title">Producto 5</h2>
-                <img src="./fashion_store/storage/img/product5.jpg" alt="Imagen del producto 5" class="product-image"></button><br>
-                     <input type="checkbox" id="add-to-favorites" class="favorites-toggle">
-                        <label for="add-to-favorites" class="favoritos">🤍</label>
-                    <div class="product-info">
-                        <span class="product-category">Chaqueta</span>
-                        <span class="product-price">$59.99</span>
+                </figure>
+            </article>
+            <!--Articulo4-->
+            <article class="contenedor-de-categoria">
+                <figure class="category-figure">            
+                    <!--tarjetas de productos-->
+                    <div class="product-card">
+                <h2 class="product-title">Categoria 4</h2>
+                <img src="./storage/img/product4.jpg" alt="Imagen del producto 4" class="product-image"></button>
+                                <input type="checkbox" id="add-to-favorites" class="favorites-toggle">
+                                    <label for="add-to-favorites" class="favoritos">🤍</label>
+                            <div class="product-info">
+                                <span class="product-category">Bolso</span>
+                                <span class="product-price">$19.99</span>
+                            </div>                        
+                            <span class="product-rating">⭐⭐⭐⭐☆</span>
                     </div>
-                    <span class="product-rating">⭐⭐⭐⭐☆</span>
-            </div>
+                </figure>
+            </article>
+            <!--Articulo5-->
+            <article class="contenedor-de-categoria">
+                <figure class="category-figure">            
+                    <!--tarjetas de productos-->
+                    <div class="product-card">
+                <h2 class="product-title">Categoria 5</h2>
+                <img src="./storage/img/product5.jpg" alt="Imagen del producto 5" class="product-image"></button>
+                                <input type="checkbox" id="add-to-favorites" class="favorites-toggle">
+                                    <label for="add-to-favorites" class="favoritos">🤍</label>
+                            <div class="product-info">
+                                <span class="product-category">Chaqueta</span>
+                                <span class="product-price">$19.99</span>
+                            </div>                        
+                            <span class="product-rating">⭐⭐⭐⭐☆</span>
+                    </div>
+                </figure>
+            </article>
         </section>
         
 </body>
