@@ -1,0 +1,112 @@
+<!--Pagina de carrito de compras-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de checkout de Fashion Store">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../css/checkout.css">
+</head>
+<body>
+    <header class="header">
+        <h3 class="welcome-message">Bienvenido a Fashion Store Usuario</h3>
+        <img src="../storage/img/userIcon.webp" alt="Ícono de usuario" class="user-picture">
+    </header>
+
+    <nav class="mobile-menu">
+        <div class="mobile-menu-toggle">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="burguer">☰ Checkout</label>
+        </div>
+        <ul class="menu">
+            <li><a href="../index.html">🏠 Inicio</a></li>
+            <li><a href="./checkout.html">🛒 Carrito</a></li>
+            <li><a href="./details.html">🤍 Favoritos</a></li>
+            <li><a href="#perfil">👤 Perfil</a></li>
+        </ul>
+    </nav>
+
+    <main class="checkout-page">
+        <section class="checkout-header">
+            <a href="#back" class="back-button">← Regresar</a>
+            <h1>Checkout</h1>
+        </section>
+
+        <div class="checkout-layout">
+            <section class="cart-items" id="carrito">
+                <h2>Productos seleccionados</h2>
+
+                <article class="cart-card">
+                    <img src="../storage/img/product1.jpg" alt="Bolso Beige" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Bolso Urbano</h3>
+                        <p class="product-category">Categoría: Accesorios</p>
+                        <p class="product-price" type="number">$19.99</p>
+                        <div class="product-controls">
+                            <div class="quantity-control">
+                                <button type="button" class="iterate">−</button>
+                                <span>1</span>
+                                <button type="button" class="iterate">+</button>
+                            </div>
+                            <button type="button" class="remove-button">Eliminar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cart-card">
+                    <img src="../storage/img/product2.jpg" alt="Vestidos" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Vestido Summerdress</h3>
+                        <p class="product-category">Categoría: Vestidos</p>
+                        <p class="product-price" type="number">$29.99</p>
+                        <div class="product-controls">
+                            <div class="quantity-control">
+                                <button type="button" class="iterate">−</button>
+                                <span>2</span>
+                                <button type="button" class="iterate">+</button>
+                            </div>
+                            <button type="button" class="remove-button">Eliminar</button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <aside class="order-summary">
+                <h2>Resumen de envío</h2>
+                <div class="summary-row">
+                    <span>Total productos</span>
+                    <strong>3</strong>
+                </div>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <strong>$79.97</strong>
+                </div>
+                <div class="summary-row">
+                    <span>Envío</span>
+                    <strong>$15.00</strong>
+                </div>
+                <div class="summary-row discount-row">
+                    <span>Descuento</span>
+                    <strong>-$20.00</strong>
+                </div>
+                <div class="summary-row total-row">
+                    <span>Total a pagar</span>
+                    <strong>$74.97</strong>
+                </div>
+
+                <fieldset class="payment-methods">
+                    <legend>Método de pago</legend>
+                    <label>💳<input type="radio" name="payment" checked> Tarjeta de crédito</label>
+                    <label>💵<input type="radio" name="payment"> Tarjeta de débito</label>
+                    <label>📦<input type="radio" name="payment"> Pago contra entrega</label>
+                </fieldset>
+
+                <button type="button" class="btn-pay">Pagar</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+</body>
+</html>
+    
