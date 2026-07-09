@@ -1,4 +1,4 @@
-@import url("variables.css");
+@import url("./variables.css");
 
 /*Font encodesans*/
 @font-face {
@@ -25,11 +25,11 @@ ul{
 
 
 /*color del body*/
-body{
-    background-color: var(--light-grey);
-    width: 100%;
-    height: 100%;
+body {
     font-family: "EncodeSans", EncodeSans-Regular;
+    background-color: var(light-grey);
+    color: var(--primary-color, #333);
+    min-height: 100%;
 }
 
 h1{
@@ -44,18 +44,13 @@ h3{
 }
 
 /*header*/
-.header{
-    font-family: "EncodeSans", EncodeSans-Regular;
+.header {
     display: flex;
-    position: relative;
-    width: 100%;
-    height: 60px;
     justify-content: space-between;
-    gap: 40px;
     align-items: center;
-    padding: 15px;
+    padding: 1rem 1.5rem;
     background-color: var(--primary-color, #333);
-    color: var(--white, #fff);
+    color: #ffffff;
 }
 
 .user-picture{
@@ -66,54 +61,60 @@ h3{
 }
 
 /* Menu hamburguesa */
-.mobile-menu input[type="checkbox"] {
-    justify-content:end;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 30px;
-    height: 30px;
-    opacity: 0;
-    z-index: 100;
+.mobile-menu {
+    position: relative;
+    padding: 15px 25px;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--primary-color-grey, #787676);
 }
 
-.mobile-menu input[type="checkbox"]:checked ~ .menu {
-    display: block;
+.mobile-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.burguer{
-    font-size: 25px;
-    cursor:pointer;
-}
-
-.menu{
-    font-family: "EncodeSans", EncodeSans-Regular;
-    position: absolute;
-    top: 60px;
-    right: 15px;
-    padding: 10px;
-    background-color: var(--primary-color, #333);
-    border-radius: 20px;
+.menu-toggle {
     display: none;
-    list-style-type: none;
-    display: inline-flex;
-    gap: 15px;
-    background-color: var(--white, #fff);
-    
 }
 
-.mobile-menu a {
-    color: var(--primary-medium, #f0f0f0);
-    background-color: var(--primary-color, #333);
-    font-size: 14px;
-    padding: 4px 9px;
-    border-radius: 20px;
+.burguer {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.menu {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.menu-toggle:checked ~ .menu {
+    display: flex;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a {
     text-decoration: none;
+    display: inline-block;
+    background: var(--primary-color, #333);
+    color: var(--light-grey, #fafafc );
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    z-index: auto;
 }
 
-.mobile-menu a:hover{
-    color: var(--primary-color, #333);
-    background-color: var(--primary-medium, #f0f0f0);
+.menu a:hover {
+    transform: translateY(-1px);
+    background-color: var(--light-grey, #A3A1A2);
+    color: #333;
 }
 
 /* Responsive rules for menu display */
@@ -238,6 +239,18 @@ main {
 @media (max-width: 480px) {
     .container {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu {
+    
+    position: fixed;
+    bottom: 2%;
+    flex-direction: row;
+    background-color: #333;
+    border-radius: 18px;
+    opacity: 0.9;
     }
 }
 

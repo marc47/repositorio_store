@@ -1,4 +1,4 @@
-@import url("variable.css");
+@import url("./variables.css");
 
 @font-face {
   font-family: 'EncodeSans';
@@ -67,12 +67,15 @@ img {
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid rgba(255, 255, 255, 0.35);
-}
+} 
+
+
+
 
 /* Navegación */
 .mobile-menu {
     position: relative;
-    padding: 1rem 1.5rem;
+    padding: 15px 25px;
     background-color: #ffffff;
     border-bottom: 1px solid var(--primary-color-grey, #787676);
 }
@@ -90,12 +93,12 @@ img {
 .burguer {
     font-size: 1.15rem;
     font-weight: 700;
-    color: var(--text-color);
+    color: var(--primary-color);
     cursor: pointer;
 }
 
 .menu {
-    margin-top: 1rem;
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
@@ -111,9 +114,9 @@ img {
 
 .menu a {
     display: inline-block;
-    background: var(--primary-color);
+    background: var(--primary-color, #333);
     color: var(--light-grey, #fafafc );
-    padding: 5px 10px;
+    padding: 8px 12px;
     border-radius: 20px;
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
@@ -354,10 +357,6 @@ img {
         padding: 20px ;
     }
 
-    .menu {
-        flex-direction: column;
-    }
-
     .cart-card {
         grid-template-columns: 1fr;
     }
@@ -365,5 +364,18 @@ img {
     .product-controls {
         flex-direction: column;
         align-items: flex-start;
+    }
+}
+
+/*mobile menu*/
+@media (max-width: 600px) {
+    .menu {
+    
+    position: fixed;
+    bottom: 2%;
+    flex-direction: row;
+    background-color: #333;
+    border-radius: 18px;
+    opacity: 0.9;
     }
 }
