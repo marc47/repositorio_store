@@ -90,6 +90,7 @@ h3{
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
+    z-index: 1;
 }
 
 .menu-toggle:checked ~ .menu {
@@ -119,13 +120,7 @@ h3{
 
 /* Responsive rules for menu display */
 /*mobile*/
-@media (max-width: 508px) {
-    .menu {
-        display:grid;
-        position:initial;
-        gap: 20px;
-    }
-}
+
 
 .favorites-toggle{
     display: none;

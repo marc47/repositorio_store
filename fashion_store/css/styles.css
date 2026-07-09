@@ -87,6 +87,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
+    z-index: 1;
 }
 
 .menu-toggle:checked ~ .menu {
@@ -105,7 +106,7 @@ body{
     padding: 8px 12px;
     border-radius: 20px;
     transition: transform 0.2s ease, background-color 0.2s ease;
-    z-index: auto;
+    z-index: 100;
 }
 
 .menu a:hover {
