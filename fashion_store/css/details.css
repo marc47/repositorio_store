@@ -91,8 +91,8 @@ h3{
     flex-wrap: wrap;
     gap: 0.75rem;
     z-index: 1;
-    background-color: var(--white);
-    color: var(--white);
+    background-color: var(--white, #fff);
+    color: var(--white, #fff);
 }
 
 .menu-toggle:checked ~ .menu {
@@ -152,7 +152,7 @@ main {
     display: grid;
     gap: 10px;
     padding: 20px;
-    background-color: var(--light-grey);
+    background-color: var(--light-grey, #f2f2f2);
     border: 1px solid #333;
     border-radius: 16px;
     color: var(--white, #fff);
