@@ -28,7 +28,7 @@ h3{
 
 /*Config del body*/
 body{
-    background-color: var(--light-grey);
+    background-color: var(--white, #ffffff);
     width: 100%;
     height: 100%;
     font-family: "EncodeSans", EncodeSans-Regular;
@@ -76,7 +76,7 @@ body{
 }
 
 .burguer {
-    font-size: 1.15rem;
+    font-size: 25px;
     font-weight: 700;
     color: var(--primary-color);
     cursor: pointer;
@@ -95,7 +95,6 @@ body{
 
 .icon{
     max-width: 80px;
-    color: var(--white);
     align-items: center;
     margin-right: 10px;
 }
@@ -167,9 +166,12 @@ body{
 }
 
 .category-div{
-    background-color: #fff;
-    padding: 15px 25px;
-    border-radius: 20px;
+    background-color: var(--light-grey, #fafafc);
+    padding: 5px 5px;
+    align-items: center;
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: var(--dark-grey, #787676);
 }
 
 .category-div:hover{
@@ -180,6 +182,8 @@ body{
 
 .selector{
     margin-right: 10px;
+    width: 40px;
+    border-radius: 50px;
 }
 
 /*seccion de categorias*/
@@ -325,7 +329,14 @@ body{
     }
     
 }
-
+@media (max-width: 599px) {
+    .category-container {
+        grid-template-columns: repeat(4, minmax(180px, 1fr));
+        background-color: var(--white, );
+        padding: 20px 5px;
+        justify-content: left;
+    }   
+}
 /* Responsive rules for menu display */
 
 
@@ -335,13 +346,13 @@ body{
     padding: 5px 10px;
     position: fixed;
     bottom: 0%;
-    left: 1.5%;
+    left: 0.5%;
     flex-direction: row;
     background-color: #333;
-    border-radius: 50px;
+    border-radius: 60px;
     
-    width: 550px;
-    gap: 60px;
+    width: 415px;
+    gap: 30px;
     }
 
     .menu-name{
@@ -355,7 +366,7 @@ body{
     }
 
     .icon {
-        width: 50px
+        width: 35px
     }
 
 
