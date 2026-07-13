@@ -349,17 +349,10 @@ body{
     left: 0.5%;
     flex-direction: row;
     background-color: #333;
-<<<<<<< HEAD
-    border-radius: 60px;
-    
-    width: 415px;
-    gap: 30px;
-=======
     border-radius: 20px;
     opacity: 0.9;
     width: 550px;
     gap: 60px;
->>>>>>> release/V1.0.2
     }
 
     .menu-name{
@@ -372,10 +365,6 @@ body{
     }
 
     .icon {
-<<<<<<< HEAD
-        width: 35px
-=======
         width: 45px;
->>>>>>> release/V1.0.2
     }
 }
