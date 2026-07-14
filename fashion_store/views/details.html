@@ -19,13 +19,13 @@
     <nav class="mobile-menu">
         <div class="mobile-menu-toggle">
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            <label for="menu-toggle" class="burguer">☰ Checkout</label>
+            <label for="menu-toggle" class="burguer">☰</label>
         </div>
         <ul class="menu">
-            <li><a href="../../index.html">🏠 Inicio</a></li>
-            <li><a href="./checkout.html">🛒 Carrito</a></li>
-            <li><a href="./details.html">🤍 Favoritos</a></li>
-            <li><a href="#perfil">👤 Perfil</a></li>
+            <li><a href="../../index.html"><span class="button-icon"><img src="../storage/img/icons/white1.svg" class="icon"></span><span class="menu-name">Inicio</span></a></li>
+            <li><a href="./fashion_store/views/checkout.html"><span class="button-icon"><img src="../storage/img/icons/white4.svg" class="icon"></span><span class="menu-name">Checkout</span></a></li>
+            <li><a href="./fashion_store/views/details.html"><span class="button-icon"><img src="../storage/img/icons/white5.svg" class="icon"></span><span class="menu-name">Favoritos</span></a></li>
+            <li><a href="#perfil"><span class="button-icon"><img src="../storage/img/icons/white6.svg" class="icon"></span><span class="menu-name">Perfil</span></a></li>
         </ul>
     </nav>
 <body>
@@ -44,6 +44,47 @@
                         <li class="rating">Calificación: ⭐⭐⭐⭐☆</li>
                         <li class="biewers">Vistas: 150</li>
                     </ul>
+                    <div class="selection">
+                        <span>Tipo de prenda:</span>
+                        <select class="size-selector">
+                            <option class="tallaXS">XS</option>
+                            <option class="tallaS">S</option>
+                            <option class="tallaM">M</option>
+                            <option class="tallaL">L</option>
+                        </select>
+                    </div>
+                    <table class="table-size">
+                        <tr class="table-title">
+                            <td class="size-title">TALLA</td>
+                            <td class="size-title">PECHO</td>
+                            <td class="size-title">CINTURA</td>
+                            <td class="size-title">CADERA</td>
+                        </tr>
+                        <tr class="size-specs">
+                            <td class="spec">XS</td>
+                            <td class="spec">86-90 cm</td>
+                            <td class="spec">86-90 cm</td>
+                            <td class="spec">86-90 cm</td>
+                        </tr>
+                        <tr class="size-specs">
+                            <td class="spec">S</td>
+                            <td class="spec">86-90 cm</td>
+                            <td class="spec">86-90 cm</td>
+                            <td class="spec">86-90 cm</td>
+                        </tr>
+                        <tr class="size-specs">
+                            <td class="spec">M</td>
+                            <td class="spec">86-90 cm</td>
+                            <td class="spec">86-90 cm</td>
+                            <td class="spec">86-90 cm</td>
+                        </tr>
+                        <tr class="size-specs">
+                            <td class="spec">L</td>
+                            <td class="spec">86-90 cm</td>
+                            <td class="spec">86-90 cm</td>
+                            <td class="spec">86-90 cm</td>                            
+                        </tr>
+                    </table>
                     <div class="buttons-view-back">
                         <button class="view-more-button" type="button">VIEW</button>
                         <button class="view-more-button" type="button">BACK</button>
@@ -51,176 +92,7 @@
                 </div>
             </article>
 
-            <article class="contenedor-productos producto2">
-                <figure class="product-figure">
-                    <img src="../storage/img/product2.jpg" alt="Imagen del producto 2" class="product-image">
-                    <input type="checkbox" id="add-to-favorites-2" class="favorites-toggle">
-                    <label for="add-to-favorites-2" class="favoritos">🤍</label>
-                </figure>
-                <div class="product-details">
-                    <ul class="product-meta">
-                        <li class="category">Calzado</li>
-                        <li class="rating">Calificación: ⭐⭐⭐☆☆</li>
-                        <li class="biewers">Vistas: 320</li>
-                    </ul>
-                    <div class="buttons-view-back">
-                        <button class="view-more-button" type="button">VIEW</button>
-                        <button class="view-more-button" type="button">BACK</button>
-                    </div>
-                </div>
-            </article>
 
-            <article class="contenedor-productos producto3">
-                <figure class="product-figure">
-                    <img src="../storage/img/product3.jpg" alt="Imagen del producto 3" class="product-image">
-                    <input type="checkbox" id="add-to-favorites-3" class="favorites-toggle">
-                    <label for="add-to-favorites-3" class="favoritos">🤍</label>
-                </figure>
-                <div class="product-details">
-                    <ul class="product-meta">
-                        <li class="category">Accesorios</li>
-                        <li class="rating">Calificación: ⭐⭐⭐⭐☆</li>
-                        <li class="biewers">Vistas: 480</li>
-                    </ul>
-                    <div class="buttons-view-back">
-                        <button class="view-more-button" type="button">VIEW</button>
-                        <button class="view-more-button" type="button">BACK</button>
-                    </div>
-                </div>
-            </article>
-
-            <article class="contenedor-productos producto4">
-                <figure class="product-figure">
-                    <img src="../storage/img/product4.jpg" alt="Imagen del producto 4" class="product-image">
-                    <input type="checkbox" id="add-to-favorites-4" class="favorites-toggle">
-                    <label for="add-to-favorites-4" class="favoritos">🤍</label>
-                </figure>
-                <div class="product-details">
-                    <ul class="product-meta">
-                        <li class="category">Ropa</li>
-                        <li class="rating">Calificación: ⭐⭐⭐⭐⭐</li>
-                        <li class="biewers">Vistas: 610</li>
-                    </ul>
-                    <div class="buttons-view-back">
-                        <button class="view-more-button" type="button">VIEW</button>
-                        <button class="view-more-button" type="button">BACK</button>
-                    </div>
-                </div>
-            </article>
-
-            <article class="contenedor-productos producto5">
-                <figure class="product-figure">
-                    <img src="../storage/img/product5.jpg" alt="Imagen del producto 5" class="product-image">
-                    <input type="checkbox" id="add-to-favorites-5" class="favorites-toggle">
-                    <label for="add-to-favorites-5" class="favoritos">🤍</label>
-                </figure>
-                <div class="product-details">
-                    <ul class="product-meta">
-                        <li class="category">Moda</li>
-                        <li class="rating">Calificación: ⭐⭐⭐☆☆</li>
-                        <li class="biewers">Vistas: 250</li>
-                    </ul>
-                    <div class="buttons-view-back">
-                        <button class="view-more-button" type="button">VIEW</button>
-                        <button class="view-more-button" type="button">BACK</button>
-                    </div>
-                </div>
-            </article>
-
-            <article class="contenedor-productos producto6">
-                <figure class="product-figure">
-                    <img src="../storage/img/product1.jpg" alt="Imagen del producto 6" class="product-image">
-                    <input type="checkbox" id="add-to-favorites-6" class="favorites-toggle">
-                    <label for="add-to-favorites-6" class="favoritos">🤍</label>
-                </figure>
-                <div class="product-details">
-                    <ul class="product-meta">
-                        <li class="category">Bolsos</li>
-                        <li class="rating">Calificación: ⭐⭐⭐⭐☆</li>
-                        <li class="biewers">Vistas: 185</li>
-                    </ul>
-                    <div class="buttons-view-back">
-                        <button class="view-more-button" type="button">VIEW</button>
-                        <button class="view-more-button" type="button">BACK</button>
-                    </div>
-                </div>
-            </article>
-
-            <article class="contenedor-productos producto7">
-                <figure class="product-figure">
-                    <img src="../storage/img/product2.jpg" alt="Imagen del producto 7" class="product-image">
-                    <input type="checkbox" id="add-to-favorites-7" class="favorites-toggle">
-                    <label for="add-to-favorites-7" class="favoritos">🤍</label>
-                </figure>
-                <div class="product-details">
-                    <ul class="product-meta">
-                        <li class="category">Calzado</li>
-                        <li class="rating">Calificación: ⭐⭐⭐⭐☆</li>
-                        <li class="biewers">Vistas: 390</li>
-                    </ul>
-                    <div class="buttons-view-back">
-                        <button class="view-more-button" type="button">VIEW</button>
-                        <button class="view-more-button" type="button">BACK</button>
-                    </div>
-                </div>
-            </article>
-
-            <article class="contenedor-productos producto8">
-                <figure class="product-figure">
-                    <img src="../storage/img/product3.jpg" alt="Imagen del producto 8" class="product-image">
-                    <input type="checkbox" id="add-to-favorites-8" class="favorites-toggle">
-                    <label for="add-to-favorites-8" class="favoritos">🤍</label>
-                </figure>
-                <div class="product-details">
-                    <ul class="product-meta">
-                        <li class="category">Accesorios</li>
-                        <li class="rating">Calificación: ⭐⭐⭐☆☆</li>
-                        <li class="biewers">Vistas: 275</li>
-                    </ul>
-                    <div class="buttons-view-back">
-                        <button class="view-more-button" type="button">VIEW</button>
-                        <button class="view-more-button" type="button">BACK</button>
-                    </div>
-                </div>
-            </article>
-
-            <article class="contenedor-productos producto9">
-                <figure class="product-figure">
-                    <img src="../storage/img/product4.jpg" alt="Imagen del producto 9" class="product-image">
-                    <input type="checkbox" id="add-to-favorites-9" class="favorites-toggle">
-                    <label for="add-to-favorites-9" class="favoritos">🤍</label>
-                </figure>
-                <div class="product-details">
-                    <ul class="product-meta">
-                        <li class="category">Ropa</li>
-                        <li class="rating">Calificación: ⭐⭐⭐⭐☆</li>
-                        <li class="biewers">Vistas: 540</li>
-                    </ul>
-                    <div class="buttons-view-back">
-                        <button class="view-more-button" type="button">VIEW</button>
-                        <button class="view-more-button" type="button">BACK</button>
-                    </div>
-                </div>
-            </article>
-
-            <article class="contenedor-productos producto10">
-                <figure class="product-figure">
-                    <img src="../storage/img/product5.jpg" alt="Imagen del producto 10" class="product-image">
-                    <input type="checkbox" id="add-to-favorites-10" class="favorites-toggle">
-                    <label for="add-to-favorites-10" class="favoritos">🤍</label>
-                </figure>
-                <div class="product-details">
-                    <ul class="product-meta">
-                        <li class="category">Moda</li>
-                        <li class="rating">Calificación: ⭐⭐⭐⭐⭐</li>
-                        <li class="biewers">Vistas: 720</li>
-                    </ul>
-                    <div class="buttons-view-back">
-                        <button class="view-more-button" type="button">VIEW</button>
-                        <button class="view-more-button" type="button">BACK</button>
-                    </div>
-                </div>
-            </article>
         </section>
     </main>
 </body>
