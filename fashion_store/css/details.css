@@ -141,10 +141,9 @@ main {
 }
 
 .container {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(180px, 1fr));
-    gap: 16px;
-    padding: 20px 0;
+    
+    width: 500px;
+    padding: 5px 35px;
     background-color: var(--white);
 }
 
@@ -152,7 +151,7 @@ main {
     display: grid;
     gap: 10px;
     padding: 20px;
-    background-color: var(--light-grey, #f2f2f2);
+    background-color: var(--white, #fff);
     border: 1px solid #333;
     border-radius: 16px;
     color: var(--white, #fff);
@@ -191,6 +190,87 @@ main {
     background-color: transparent;
     padding: 0;
 }
+
+/****************************************
+*****************************************
+**
+** CAMBIOS DEL EXAMEN
+**
+*****************************************
+*****************************************
+
+
+/*select*/
+.selection{
+    position: relative;
+    gap: 40px;
+    color: #333;
+}
+
+.size-selector{
+    width: 200px;   
+    align-items: end;
+    margin-right: 0%;    
+}
+
+/*Estilos para tallas*/
+table{
+    border-width: 2px; 
+    color: var(--primary-color);
+    align-items: center; 
+    border: 0px;
+    padding: 0px;
+    border-spacing: 0px;
+    border: 1px solid #777777;
+}
+
+/*td border*/
+
+td{
+    border: 1px solid gray;
+}
+
+/*titulo de tabla*/
+
+tr{
+    border: 2px solid black;
+    height: 10px;
+    color-scheme: 30px;
+    text-align: center;
+}
+
+.table-title{
+    color: var(--primary-color);
+    border: var(--light-grey);
+    
+    text-align: center;
+    background-color: var(--light-grey);
+    height: 35px;
+    font-weight: bold;
+}
+
+.size-title{
+    border: 1px #333;
+    text-align: center;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .category,
 .rating,
